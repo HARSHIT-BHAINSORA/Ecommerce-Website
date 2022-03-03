@@ -1,0 +1,39 @@
+.header{
+    height : 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131913;
+    position: sticky;
+    top : 0px;
+    z-index : 100;  
+
+    /* for the z-index = 100 for div using inside head should shown clearly*/
+}
+
+.header__logo{
+    width: 100px;
+    object-fit: contain; /* to specify how an <img> or <video> should be resized to fit its container. */
+    margin: 0 20px;
+    margin-top: 18px;
+}
+
+.header__search{
+    display: flex;
+    flex :1;  /*all remaining space goes to that */
+    align-items: center;
+    border-radius: 24px;
+}
+
+.header__searchInput{
+    height:10px;
+    padding: 10px;
+    border: none;
+    width:100%; 
+} 
+
+.header__searchIcon{
+    padding : 5px;
+    height: 22px !important; /*overide all other thing on it*/
+    background-color: #cd9042;
+
+}

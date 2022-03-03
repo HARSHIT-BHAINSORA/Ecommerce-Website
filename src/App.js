@@ -5,9 +5,7 @@ import Header from'./Header';
 function App() {
   return (
     <div className="App">
-      <h1>hello i am newbie at the react 🚀  </h1>
-
-      {/* HEADER */}
+    {/* HEADER */}
       <Header/>
       {/* HOME */}
     </div>
