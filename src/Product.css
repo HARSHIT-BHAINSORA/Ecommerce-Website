@@ -18,7 +18,9 @@
     object-fit: contain;
     margin-bottom: 15px;
 }
-
+.product__rating{
+    display:flex;
+}
 .product__price{
     margin-top:5px;
 }
