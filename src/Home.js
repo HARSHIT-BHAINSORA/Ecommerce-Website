@@ -45,7 +45,7 @@ function Home() {
           />
           <Product
             id="2113"
-            title="METRO TOY'S & GIFT Cars 3 Theme Diecast Metal Toy Car Play Set for Kids Best Gifts Toys for Kids Boys - Set of 6, Multi color"
+            title="METRO TOY'S & GIFT Cars 3 Theme Diecast Metal Toy Car Play Set for Kids Best Gifts Toys"
             image="https://m.media-amazon.com/images/I/51-FGI3Sr6L._AC_UL320_.jpg"
             price={459.0}
             rating={4}
