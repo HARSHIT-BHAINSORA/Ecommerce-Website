@@ -4,6 +4,7 @@ export const initialState = {
 };
 
 // Selector
+// simple for loop in the basket items
 export const getBasketTotal = (basket) =>
   basket?.reduce((amount, item) => item.price + amount, 0);
 
