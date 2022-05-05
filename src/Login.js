@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Login.css';
 import {Link} from "react-router-dom";
 
 function Login() {
+
+  const [email , setEmail] = useState('');
+  const[password , setPassword] = useState('');
+
+  const signIn = e =>{
+    e.preventDefault();
+  }
+
+  const register = e =>{
+    e.preventDefault();
+  }
   return (
     <div className='login'>
         <Link to="/">
@@ -16,17 +27,26 @@ function Login() {
 
             <form>
                 <h5>E-mail</h5>
-                <input type='text' />
+                <input type='text'  value = {email} 
+                onchange={e=>setEmail(e.target.value)}/>
+                {/* if user input the email every time event happen and target to it update the content inside the value */}
 
                 <h5>Password</h5>
-                <input type='password' />
+                <input type='password' value = {password}
+                onchange = {e => setPassword(e.target.value)}/>
                 
-                <button>Sign In</button>
+                <button className='login_signinButton' type ='submit' 
+                onclick= {signIn} >Sign In</button>
             </form>
 
             <p>
-                
+                By siging-in you agree to the Amazon conditions
+                of Use & Sale .Please see Privacy Notice, our Cookies
+                Notice and our Interent-Based Ads Notice.              
             </p>
+
+            <button className="login_registerButton" onclick={register}
+            >Create your Amazom Account</button>
         </div>
     </div>
   )
