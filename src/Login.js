@@ -1,19 +1,43 @@
 import React, {useState} from 'react';
 import './Login.css';
-import {Link} from "react-router-dom";
+import {Link , useHistory} from "react-router-dom";
+import { auth } from "./firebase";
 
 function Login() {
 
-  const [email , setEmail] = useState('');
-  const[password , setPassword] = useState('');
+  const history = useHistory(); // change the url
+  const [email , setEmail] = useState("");
+  const[password , setPassword] = useState("");
 
   const signIn = e =>{
     e.preventDefault();
+
+    auth
+    .signInWithEmailAndPassword(email , password)
+    .then(auth => {
+      history.push('/')
+    })
+    .catch(error =>alert(error.message))
   }
 
   const register = e =>{
+    // if enter the detail and dydefault page is refresed so data is loss here.
+    // to prevent it we use this.
     e.preventDefault();
-  }
+
+    auth
+    .createUserWithEmailAndPassword(email , password)
+    .then((auth) => {
+      // it successfully create an account .
+      console.log(auth);
+      if(auth)
+      {
+        history.push('/');
+      }
+    })
+    .catch(error => alert(error.message))
+  };
+
   return (
     <div className='login'>
         <Link to="/">
@@ -27,16 +51,21 @@ function Login() {
 
             <form>
                 <h5>E-mail</h5>
-                <input type='text'  value = {email} 
-                onchange={e=>setEmail(e.target.value)}/>
+                <input  
+                value = {email}
+                onChange={(e)=>setEmail(e.target.value)}
+                type = "email"
+                />
                 {/* if user input the email every time event happen and target to it update the content inside the value */}
 
                 <h5>Password</h5>
-                <input type='password' value = {password}
-                onchange = {e => setPassword(e.target.value)}/>
+                <input
+                value = {password} 
+                type='password' 
+                onChange = {e => setPassword(e.target.value)}/>
                 
                 <button className='login_signinButton' type ='submit' 
-                onclick= {signIn} >Sign In</button>
+                onClick= {signIn} >Sign In</button>
             </form>
 
             <p>
@@ -45,7 +74,7 @@ function Login() {
                 Notice and our Interent-Based Ads Notice.              
             </p>
 
-            <button className="login_registerButton" onclick={register}
+            <button className="login_registerButton" onClick={register}
             >Create your Amazom Account</button>
         </div>
     </div>
