@@ -10,7 +10,7 @@ import {useStateValue} from "./StateProvider";
 
 function App() {
 
-  const [{user} , dispatch] = useStateValue();
+  const [ {user} ,dispatch] = useStateValue();
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
