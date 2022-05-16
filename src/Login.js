@@ -75,7 +75,7 @@ function Login() {
             </p>
 
             <button className="login_registerButton" onClick={register}
-            >Create your Amazom Account</button>
+            >Create your Amazon Account</button>
         </div>
     </div>
   )
