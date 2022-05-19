@@ -41,3 +41,14 @@
     margin-bottom: 15px;
     height:100px;
 }
+
+.product{
+    transition: 200ms transform ease-in-out;
+}
+
+.product:hover{
+    box-shadow: 20px 20px 50px 15px grey;
+    transform: scale(1.05);
+    overflow:hidden;
+}
+

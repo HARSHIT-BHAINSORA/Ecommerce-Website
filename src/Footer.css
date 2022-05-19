@@ -1,0 +1,38 @@
+
+.back_bnt{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+
+.footer_bnt{
+    width: 90%;
+    height: 50px;
+    background-color: #2C3333;
+    color: white;
+    text-align: center;
+    font-size: larger;
+    font-weight :600px;
+    border-radius: 5px;
+}
+
+.footer_con{
+    display: flex;
+    flex-direction: row;
+    height:200px;
+    justify-content:space-evenly;
+    margin-top: 10px;
+    color: white;
+}
+
+.head{
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.footer_desc{
+    margin-top : 10px;
+    height:400px;
+    background-color: #383838;
+}
