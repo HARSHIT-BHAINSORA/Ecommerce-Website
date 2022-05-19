@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import {auth} from "./firebase";
 import {useStateValue} from "./StateProvider";
+import Footer from "./Footer";
 
 function App() {
 
@@ -47,11 +48,13 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+            <Footer/>
           </Route>
 
           <Route path="/">
             <Header />
             <Home />
+            <Footer/>
           </Route>
         </Switch>
       </div>
