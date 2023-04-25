@@ -11,15 +11,15 @@
   <h3> Screenshot</h3>
   
   <h4> Home-Page </h4>
-    <img src="photo/Screenshot (9).png" width=1000px height = 500px>
+    <img src="photo/Screenshot (9).png" width=800px height = 500px>
    
   <h4>Login-Page </h4>
-   <img src="photo/Screenshot (16).png" width=1000px height = 500px>
+   <img src="photo/Screenshot (16).png" width=800px height = 500px>
   
   <h4>Cart-Page</h4>  
-    <img src="photo/Screenshot (13).png" width=1000px height = 500px>
+    <img src="photo/Screenshot (13).png" width=800px height = 500px>
   <h4>Checkout-Page</h4>
-  <img src="photo/Screenshot (17).png" width=1000px height = 500px>
+  <img src="photo/Screenshot (17).png" width=800px height = 500px>
   <h4>Order & Return page</h4>
-    <img src="photo/Screenshot (14).png" width=1000px height = 500px>
+    <img src="photo/Screenshot (14).png" width=800px height = 500px>
 </section>
